@@ -112,7 +112,7 @@ const DOM = {
 };
 
 const Utils = {
-  formatValue(value) {
+  formatAmount(value) {
     value = value * 100;
     return Math.round(value);
   },
@@ -161,7 +161,7 @@ const Form = {
   formatValues() {
     let {description, amount, date} = Form.getValues();
 
-    amount = Utils.formatValue(amount);
+    amount = Utils.formatAmount(amount);
     date = Utils.formatDate(date);
 
     return {
