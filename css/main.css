@@ -1,0 +1,98 @@
+/* ======== Global ======== */
+
+:root {
+  --dark-blue: #363F5F;
+  --green: #49AA26;
+  --light-green: #3DD705;
+  --red: #E92929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  background: #F0F2F5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+/* ======== Header ========*/
+
+header {
+  background: #2D4A22;
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+#logo {
+  color: white;
+  font-weight: 100;
+}
+
+/* ======== Titles ======== */
+
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+  
+  font-weight: normal;
+}
+
+/* ======== Balance ======== */
+
+#balance {
+  margin-top: -8rem;
+}
+
+#balance h2 {
+  color: white;
+  margin-top: 0;
+}
+
+/* ======== Footer ======== */
+
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  
+  color: var(--dark-blue);
+  opacity: 0.6;
+}
+
+/* ======== Responsive ======== */
+
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
