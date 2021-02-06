@@ -99,7 +99,7 @@ const DOM = {
 
     document
       .getElementById('expenseDisplay')
-      .innerHTML = Utils.formatCurrency(Transaction.expenses());
+      .innerHTML = Utils.formatCurrency(Math.abs(Transaction.expenses()));
 
     document
       .getElementById('totalDisplay')
