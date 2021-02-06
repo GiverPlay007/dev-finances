@@ -1,10 +1,11 @@
 a{
-  color: var(--green);
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--light-green);
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 button {
@@ -25,9 +26,25 @@ button:hover {
   background-color: var(--light-green);
 }
 
-.button.new {
+.button {
   display: inline-block;
   margin-bottom: .8rem;
+}
+
+.button.new {
+  color: var(--green);
+}
+
+.button.new:hover {
+  color: var(--light-green);
+}
+
+.button.clear {
+  color: var(--dark-red);
+}
+
+.button.clear:hover{
+  color: var(--red);
 }
 
 .button.cancel {

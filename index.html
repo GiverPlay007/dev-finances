@@ -55,10 +55,17 @@
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
 
-        <a
+        <div id="buttons">
+          <a
           onclick="Modal.open()"
           href="#" 
           class="button new">+ Nova Transação</a>
+
+        <a
+          onclick="Transaction.clear()"
+          href="#" 
+          class="button clear">- Limpar Tudo</a>
+        </div>
 
         <table id="data-table">
           <thead>

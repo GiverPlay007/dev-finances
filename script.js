@@ -61,6 +61,11 @@ const Transaction = {
 
   total() {
     return Transaction.incomes() + Transaction.expenses();
+  },
+
+  clear() {
+    Transaction.all.splice(0, Transaction.all.length);
+    App.reload();
   }
 };
 
@@ -189,6 +194,7 @@ const Form = {
       Form.clearFields();
       Modal.close();
     } catch(error) {
+      alert(error.message)
       console.log(error);
     }
   }
