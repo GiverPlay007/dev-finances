@@ -66,6 +66,10 @@ const Transaction = {
   clear() {
     Transaction.all.splice(0, Transaction.all.length);
     App.reload();
+  },
+
+  download() {
+    Utils.download('Extrato.txt', Utils.transactionsToText(Transaction.all));
   }
 };
 
@@ -139,6 +143,17 @@ const Utils = {
   formatDate(value) {
     const splittedDate = value.split('-');
     return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`;
+  },
+
+  transactionsToText(transactions) {
+    return 'Hello, world'
+  },
+
+  download(name, text) {
+    const link = document.createElement('a');
+    link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    link.setAttribute('download', name);
+    link.click();
   }
 };
 
@@ -158,7 +173,7 @@ const Form = {
   validateFields() {
     const { description, amount, date } = Form.getValues();
 
-    if(description.trim() === '' || amount.trim() == '' || date.trim() == '') {
+    if(description.trim() === '' || amount.trim() === '' || date.trim() === '') {
       throw new Error('Por favor, preencha todos os campos.');
     }
   },

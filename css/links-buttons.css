@@ -2,7 +2,7 @@ a{
   text-decoration: none;
 }
 
-#buttons {
+.buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,14 +28,16 @@ button:hover {
 
 .button {
   display: inline-block;
-  margin-bottom: .8rem;
+  margin: .8rem 0
 }
 
-.button.new {
+.button.new,
+.button.download {
   color: var(--green);
 }
 
-.button.new:hover {
+.button.new:hover,
+.button.download:hover {
   color: var(--light-green);
 }
 
