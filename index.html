@@ -67,26 +67,26 @@
           class="button clear">- Limpar Tudo</a>
         </div>
 
-        <table id="data-table">
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            
-          </tbody>
-        </table>
+          <table id="data-table">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
 
         <div class="buttons">
           <br>
           <a
            href="#"
-           onclick="Transaction.download()"
-           class="button download">Baixar extrato ↓</a>
+           onclick="Downloader.download()"
+           class="button download">↓ Baixar extrato</a>
         </div>
         
       </section>
@@ -151,6 +151,7 @@
       <p>dev.finance$</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/download.js"></script>
   </body>
 </html>
