@@ -92,7 +92,7 @@ const DOM = {
     const html = `
       <td class="description">${transaction.description}</td>
       <td class="${clazz}">${formattedValue}</td>
-      <td class="date">${transaction.date}</td>
+      <td class="date">${Utils.formatDate(transaction.date)}</td>
       <td class="minus">
         <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
       </td>
@@ -144,7 +144,7 @@ const Utils = {
     const splittedDate = value.split('-');
     return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`;
   },
-
+  
   transactionsToText(transactions) {
     return 'Hello, world'
   },
@@ -182,7 +182,6 @@ const Form = {
     let {description, amount, date} = Form.getValues();
 
     amount = Utils.formatAmount(amount);
-    date = Utils.formatDate(date);
 
     return {
       description,
@@ -205,6 +204,7 @@ const Form = {
 
       const transaction = Form.formatValues();
       Transaction.add(transaction);
+      App.reload();
 
       Form.clearFields();
       Modal.close();
@@ -218,9 +218,15 @@ const Form = {
 const App = {
   init() {
     Transaction.all.forEach(DOM.addTransaction);
-    DOM.updateBalance();
+    
+    Transaction.all.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
     
     Storage.set(Transaction.all);
+    DOM.updateBalance();
   },
 
   reload() {
