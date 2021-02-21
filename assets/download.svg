@@ -1,0 +1,20 @@
+<svg width="62" height="57" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with UXWing SVG Editor - https://uxwing.com/svg-icon-editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="59" width="64" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <style transform="matrix(0.4936221391278792,0,0,0.4936221391278792,0,0) " type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style>
+  <g id="svg_7">
+   <g transform="matrix(0.4936221391278792,0,0,0.4936221391278792,0,0) " id="svg_5">
+    <path fill="#3dd705" id="svg_6" d="m14.556413,38.672288l30.58,0l0,-12.45l34.49,0l0,12.45l31.47,0l-48.24,46.93l-48.3,-46.93l0,0zm48.35,62.23l47.51,-0.14l4.54,-21.51l9.38,0.31l0,34.36l-122.87,0l0,-34.35l9.39,-0.31l4.54,21.51l47.51,0.13l0,0l0,0zm-17.77,-97.88l34.49,0l0,4.62l-34.49,0l0,-4.62l0,0zm0,9.32l34.49,0l0,9.44l-34.49,0l0,-9.44l0,0z" class="st0"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -66,3 +66,7 @@ button:hover {
 .button.cancel:hover {
   opacity: 1;
 }
+
+img#download {
+  width: 1em;
+}
